@@ -1,7 +1,6 @@
 .footer {
     width: 100%;
-    position: fixed;
-    bottom: 0;
+    position: relative;
     z-index: 1;
 
     display: flex;
@@ -79,10 +78,6 @@
 }
 
 @media screen and (max-width: 1150px) {
-    .footer {
-        position: relative;
-    }
-
     .footerlinks {
         align-items: center;
         flex-direction: column;
