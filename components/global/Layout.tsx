@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react'
 import Footer from './Footer'
 import Navbar from './Navbar'
-import styles from '@/styles/Home.module.css'
 import Head from 'next/head'
 
 interface Props {
@@ -19,7 +18,7 @@ const Layout = (props:Props) => {
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <Navbar/>
-    <main className={styles.main}>
+    <main>
       {props.children}
     </main>
     <Footer/>
