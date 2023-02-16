@@ -14,11 +14,11 @@ const Footer = () => {
         <div className={styles.footerlinks_contact}>
           <h1 className={styles.footerheadtext}>Contact Us</h1>
           {contact.map((item) => (
-          <>
+          <div key={item._id}>
             <p className="p__opensans">{item.street}, {item.city}, {item.postcode}</p>
             <p className="p__opensans">{item.phone}</p>
             <p className="p__opensans">{item.email}</p>
-          </>
+          </div>
           ))}
         </div>
 
