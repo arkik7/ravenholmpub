@@ -19,7 +19,7 @@ const Navbar = () => {
       <ul className={styles.navbarlinks}>
         <li className="p__opensans"><Link href={'/daily-menu'}>Daily Menu</Link></li>
         <li className="p__opensans"><Link href={'/menu'}>Menu</Link></li>
-        <li className="p__opensans"><Link href={'/blog'}>Blog</Link></li>
+        {/*<li className="p__opensans"><Link href={'/blog'}>Blog</Link></li>*/}
         <li className="p__opensans"><Link href={'/contact'}>Contact</Link></li>
       </ul>
       <div className={styles.navbarlogin}>
@@ -33,7 +33,7 @@ const Navbar = () => {
             <ul className={styles.navbarsmallscreen_links}>
               <li><Link href={'/daily-menu'} onClick={() => setToggleMenu(false)}>Daily Menu</Link></li>
               <li><Link href={'/menu'} onClick={() => setToggleMenu(false)}>Menu</Link></li>
-              <li><Link href={'/blog'} onClick={() => setToggleMenu(false)}>Blog</Link></li>
+             {/* <li><Link href={'/blog'} onClick={() => setToggleMenu(false)}>Blog</Link></li>*/}
               <li><Link href={'/contact'} onClick={() => setToggleMenu(false)}>Contact</Link></li>
               <li><Link href={'/contact'} onClick={() => setToggleMenu(false)}>Book Table</Link></li>
             </ul>
