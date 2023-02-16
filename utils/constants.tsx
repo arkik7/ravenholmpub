@@ -31,6 +31,26 @@ export const contact = [
       {
         day: 'Tuesday',
         hour: '09-23'
+      },
+      {
+        day: 'Wednesday',
+        hour: '09-23'
+      },
+      {
+        day: 'Thursday',
+        hour: '09-23'
+      },
+      {
+        day: 'Friday',
+        hour: '09-23'
+      },
+      {
+        day: 'Saturday',
+        hour: '09-23'
+      },
+      {
+        day: 'Sunday',
+        hour: 'Closed'
       }
     ]
   }
