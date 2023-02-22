@@ -2,23 +2,24 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from '@/styles/Menu.module.css'
+import { FiFacebook, FiInstagram, FiTwitter } from 'react-icons/fi'
 
 
 export default function Home() {
   return (
     <>
 
-      <div>
-        <header>
+      <div className={styles.menubody} >
+        <header className={styles.header}>
           <div className={styles.name}><span>T</span><span>O</span><span>A</span><span>S</span><span>T</span><span>Y</span></div>
-          <div className={styles.openinghours}>Open Sunday to Friday 10AM - 8PM. Closed on Mondays.</div>
+          <div className={styles.openinghours}>Open Monday-Saturday: 09:00 - 23:00</div>
           <div className={styles.location}>
-            <p>880 Toast Street, Avocado, NY 23511</p>
-            <p>(233) 323 3444</p>
+            <p>Street</p>
+            <p>phone</p>
           </div>
           <div className={styles.specialannouncements} />
         </header>
-        <main className={styles.menubody}>
+        <main>
           <div className={styles.legend}>
             <div className={styles.legend__item}><i>N</i><span>Nuts</span></div>
             <div className={styles.legend__item}><i>E</i><span>Eggs</span></div>
@@ -27,8 +28,10 @@ export default function Home() {
             <div className={styles.legend__item}><i>S</i><span>Seafood</span></div>
           </div>
           <div className={styles.menu}>
+
             <div className={styles.mains}>
               <h3>Avocado Toasts</h3>
+
               <div className={styles.item}>
                 <div className={styles.item__image}><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/toast-1.png" /></div>
                 <div className={styles.item__desc}>
@@ -36,9 +39,10 @@ export default function Home() {
                   <div className={styles.item__description}>Avocado, hot sauce, blue cheese. Spicy.</div>
                   <div className={styles.item__price}>$7</div>
                   <div className={styles.item__calories}>300 calories</div>
-                  <div className={styles.item__allergens}><span className="allergen wheat">W</span><span className="allergen dairy">D</span></div>
+                  <div className={styles.item__allergens}><span className={`${styles.allergen} ${styles.wheat}`}>W</span><span className={`${styles.allergen} ${styles.dairy}`}>D</span></div>
                 </div>
               </div>
+
               <div className={styles.item}>
                 <div className={styles.item__image}><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/toast-2.png" /></div>
                 <div className={styles.item__desc}>
@@ -46,7 +50,7 @@ export default function Home() {
                   <div className={styles.item__description}>Avocado, cucumbers, scallions, various spices.</div>
                   <div className={styles.item__price}>$6.5</div>
                   <div className={styles.item__calories}>220 calories</div>
-                  <div className={styles.item__allergens}><span className="allergen wheat">W</span></div>
+                  <div className={styles.item__allergens}><span className={`${styles.allergen} ${styles.wheat}`}>W</span></div>
                 </div>
               </div>
               <div className={styles.item}>
@@ -56,7 +60,10 @@ export default function Home() {
                   <div className={styles.item__description}>Avocado, ricotta, eggs, lemon zest, olive oil, basil.</div>
                   <div className={styles.item__price}>$7.5</div>
                   <div className={styles.item__calories}>318 calories</div>
-                  <div className={styles.item__allergens}><span className="allergen eggs">E</span><span className="allergen wheat">W</span><span className="allergen dairy">D</span></div>
+                  <div className={styles.item__allergens}>
+                    <span className={`${styles.allergen} ${styles.eggs}`}>E</span>
+                    <span className={`${styles.allergen} ${styles.wheat}`}>W</span>
+                    <span className={`${styles.allergen} ${styles.dairy}`}>D</span></div>
                 </div>
               </div>
               <div className={styles.item}>
@@ -66,7 +73,7 @@ export default function Home() {
                   <div className={styles.item__description}>Avocado, smoked salmon, tomatoes, capers, onions, goat cheese.</div>
                   <div className={styles.item__price}>$10.5</div>
                   <div className={styles.item__calories}>320 calories</div>
-                  <div className={styles.item__allergens}><span className="allergen wheat">W</span><span className="allergen dairy">D</span><span className="allergen sea">S</span></div>
+                  <div className={styles.item__allergens}><span className={`${styles.allergen} ${styles.wheat}`}>W</span><span className={`${styles.allergen} ${styles.dairy}`}>D</span><span className={`${styles.allergen} ${styles.sea}`}>S</span></div>
                 </div>
               </div>
               <div className={styles.item}>
@@ -76,7 +83,7 @@ export default function Home() {
                   <div className={styles.item__description}>Avocado, anchovies, lemon juice, paprika.</div>
                   <div className={styles.item__price}>$9</div>
                   <div className={styles.item__calories}>296 calories</div>
-                  <div className={styles.item__allergens}><span className="allergen wheat">W</span><span className="allergen dairy">D</span><span className="allergen sea">S</span></div>
+                  <div className={styles.item__allergens}><span className={`${styles.allergen} ${styles.wheat}`}>W</span><span className={`${styles.allergen} ${styles.dairy}`}>D</span><span className={`${styles.allergen} ${styles.sea}`}>S</span></div>
                 </div>
               </div>
               <div className={styles.item}>
@@ -86,7 +93,7 @@ export default function Home() {
                   <div className={styles.item__description}>Avocado, mangoes, lemon juice, chili powder, mint.</div>
                   <div className={styles.item__price}>$7.5</div>
                   <div className={styles.item__calories}>240 calories</div>
-                  <div className={styles.item__allergens}><span className="allergen wheat">W</span></div>
+                  <div className={styles.item__allergens}><span className={`${styles.allergen} ${styles.wheat}`}>W</span></div>
                 </div>
               </div>
               <div className={styles.item}>
@@ -96,7 +103,7 @@ export default function Home() {
                   <div className={styles.item__description}>Avocado, citrus fruit of the week, mint, feta cheese.</div>
                   <div className={styles.item__price}>$7</div>
                   <div className={styles.item__calories}>238 calories</div>
-                  <div className={styles.item__allergens}><span className="allergen wheat">W</span><span className="allergen dairy">D</span></div>
+                  <div className={styles.item__allergens}><span className={`${styles.allergen} ${styles.wheat}`}>W</span><span className={`${styles.allergen} ${styles.dairy}`}>D</span></div>
                 </div>
               </div>
               <div className={styles.item}>
@@ -106,10 +113,12 @@ export default function Home() {
                   <div className={styles.item__description}>Avocado, radishes, baby peas, lemon juice, basil.</div>
                   <div className={styles.item__price}>$6.5</div>
                   <div className={styles.item__calories}>220 calories</div>
-                  <div className={styles.item__allergens}><span className="allergen wheat">W</span></div>
+                  <div className={styles.item__allergens}><span className={`${styles.allergen} ${styles.wheat}`}>W</span></div>
                 </div>
               </div>
+
             </div>
+
             <div className={styles.sides}>
               <h3>Sides</h3>
               <div className={styles.item}>
@@ -136,6 +145,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
             <div className={styles.tarts}>
               <h3>Tarts</h3>
               <div className={styles.item}>
@@ -171,6 +181,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
             <div className={styles.latte}>
               <h3> Special Lattes</h3>
               <div className={styles.item}>
@@ -230,18 +241,45 @@ export default function Home() {
                 </div>
               </div>
               <div className={styles.item}>
-                <div className={styles.item__image}><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/cof-charcoal.png" /></div>
+                <div className={styles.item__image}>
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/cof-charcoal.png" />
+                </div>
                 <div className={styles.item__desc}>
                   <div className={styles.item__name}>Charcoal Latte</div>
                   <div className={styles.item__price}>$9</div>
                   <div className={styles.item__calories}>450 calories</div>
                 </div>
               </div>
-            </div><a className={styles.menudownload}>Download the menu</a>
+            </div>
+            <a className={styles.menudownload}>Download the menu</a>
           </div>
         </main>
         <footer className={styles.footer}>
-          <p> Let's get toasty on social media!</p><a className={styles.socialitem} href="https://twitter.com/meowlivia_" target="_blank"><i className="icon-social-twitter icons" /></a><a className="social-item" href="https://github.com/oliviale" target="_blank"><i className="icon-social-github icons" /></a><a className="social-item" href="https://dribbble.com/oliviale" target="_blank"><i className="icon-social-dribbble icons" /></a>
+          <p> Let's get toasty on social media!</p>
+          <a 
+            className={styles.socialitem} 
+            href="#" 
+            target="_blank">
+            <i>
+              <FiTwitter/>
+            </i>
+          </a>
+          <a 
+            className={styles.socialitem} 
+            href="#" 
+            target="_blank">
+            <i>
+              <FiFacebook/>
+            </i>
+          </a>
+          <a 
+          className={styles.socialitem} 
+          href="#" 
+          target="_blank">
+            <i>
+              <FiInstagram/>
+            </i>
+          </a>
         </footer>
       </div>
       

@@ -17,11 +17,11 @@ export const food = [
 export const contact = [
   {
     _id: 1,
-    street: 'Test 666',
-    postcode: 666,
+    street: 'Test 123',
+    postcode: 123,
     city: 'Brno',
     country: 'Cz',
-    phone: 666666,
+    phone: 1234,
     email: 'test@test.com',
     openinghours: [
       {

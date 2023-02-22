@@ -1,10 +1,8 @@
 import React from 'react'
-import { Inter } from '@next/font/google'
-import Link from 'next/link'
 import { NextPage } from 'next'
 import { Food } from '@/types'
+import styles from '@/styles/Menu.module.css'
 
-const inter = Inter({ subsets: ['latin'] })
 
 interface IProps {
   item: Food;
@@ -12,19 +10,23 @@ interface IProps {
 
 const MenuItem: NextPage<IProps> = ({ item: { name, price, description }}) => {
   return (
-    <Link
-      href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-      className=""
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <h2 className="">
-        {name} <span>{price}</span>
-      </h2>
-      <p className="">
-       {description}
-      </p>
-    </Link>
+    <div className={styles.item}>
+      <div className={styles.item__image}>
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/toast-1.png" />
+      </div>
+      <div className={styles.item__desc}>
+        <div className={styles.item__name}>{name}</div>
+        <div className={styles.item__description}>{description}</div>
+        <div className={styles.item__price}>$ {price}</div>
+        <div className={styles.item__calories}>300 calories</div>
+        <div className={styles.item__allergens}>
+          <span className={`${styles.allergen} ${styles.wheat}`}>W</span>
+          <span className={`${styles.allergen} ${styles.dairy}`}>D</span>
+          <span className={`${styles.allergen} ${styles.sea}`}>S</span>
+          <span className={`${styles.allergen} ${styles.eggs}`}>E</span>
+        </div>
+      </div>
+    </div>
   )
 }
 
