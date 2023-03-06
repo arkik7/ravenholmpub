@@ -68,6 +68,12 @@ span.allergen.sea {
   color: #e2dccc;
 }
 
+span.allergen.nuts {
+  background: #00acc1;
+  border: 2px solid #04110f;
+  color: #e2dccc;
+}
+
 .header {
   display: grid;
   grid-template-columns: min-content 2fr 1.3fr;

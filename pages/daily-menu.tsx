@@ -1,8 +1,16 @@
 import Head from 'next/head'
 import React from 'react'
 import styles from '@/styles/DailyMenu.module.css'
+import { BASE_URL } from '@/utils'
+import axios from 'axios';
+import { DailyMenu } from '@/types';
 
-const DailyMenu = () => {
+interface IProps {
+  days: DailyMenu[];
+}
+
+const DailyMenu = ({ days }: IProps) => {
+  console.log(days)
   return (
     <>
       <Head>
@@ -56,3 +64,14 @@ const DailyMenu = () => {
 }
 
 export default DailyMenu
+
+export const getServerSideProps = async () => {
+
+  let dayRes = await axios.get(`${BASE_URL}/api/dailyMenu`);
+
+  return {
+    props: { 
+      days: dayRes.data,
+    },
+  };
+};

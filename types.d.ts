@@ -6,6 +6,35 @@ export interface Food {
 }
 
 
+export interface Item {
+  _id: string
+  name: string;
+  image: any;
+  categories: {
+    title: string;
+    description: string;
+    _key: string;
+  }[];
+  allergens: {
+    title: string;
+    description: string;
+    code: string;
+    _key: string;
+  }[];
+  price: any;
+  menuPrice: any;
+  slug: {
+    current: string;
+  };
+  details: string;
+}
+
+export interface DailyMenu {
+  _id: string;
+  day: string;
+  foods: Item[];
+}
+
 export interface Contact {
   _id: number;
   street: string;

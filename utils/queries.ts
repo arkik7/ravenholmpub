@@ -1,29 +1,25 @@
-export const queryName = () => {
-  const query = `*[_type == "post"] | order(_createdAt desc){
-    _id,
-     caption,
-       video{
-        asset->{
-          _id,
-          url
-        }
-      },
-      userId,
-      postedBy->{
-        _id,
-        userName,
-        image
-      },
-    likes,
-    comments[]{
-      comment,
-      _key,
-      postedBy->{
-      _id,
-      userName,
-      image
-    },
-    }
+export const allItemsQuery = () => {
+  const query = `*[_type == "item"] | order(_createdAt desc){
+    ...,
+    categories[]->,
+    allergens[]->
+  }`;
+
+  return query;
+};
+
+
+export const itemDetailQuery = (slug: string | string[]) => {
+  const query = `*[_type == "item" && slug.current == '${slug}']{
+    ...,
+  }`;
+  return query;
+};
+
+export const dailyMenuQuery = () => {
+  const query = `*[_type == "dailyMenu"] | order(_createdAt desc){
+    ...,
+    foods[]->
   }`;
 
   return query;

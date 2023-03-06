@@ -1,6 +1,6 @@
 import React from 'react'
 import { NextPage } from 'next';
-import { Food } from '@/types';
+import { Item } from '@/types';
 import styles from '@/styles/Menu.module.css'
 import MainsGridList from './MainsGridList';
 import SidesGridList from './SidesGridList';
@@ -9,7 +9,7 @@ import SpecialsGridList from './SpecialsGridList';
 import MenuFooter from './MenuFooter';
 
 interface IProps {
-    data: Food[];
+    data: Item[];
 }
 
 const MenuBody: NextPage<IProps> = ({data}) => {
