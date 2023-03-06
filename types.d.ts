@@ -33,6 +33,7 @@ export interface DailyMenu {
   _id: string;
   day: string;
   foods: Item[];
+  message: string;
 }
 
 export interface Contact {

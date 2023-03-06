@@ -16,7 +16,7 @@ const MenuBody: NextPage<IProps> = ({data}) => {
   return (
     <div className={styles.menubody}>
         <header className={styles.header}>
-          <div className={styles.name}><span>T</span><span>O</span><span>A</span><span>S</span><span>T</span><span>Y</span></div>
+          <div className={styles.name}><span>R</span><span>H</span><span>D</span><span>P</span><span>U</span><span>B</span></div>
           <div className={styles.openinghours}>Open Monday-Saturday: 09:00 - 23:00</div>
           <div className={styles.location}>
             <p>Street</p>

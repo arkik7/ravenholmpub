@@ -11,7 +11,6 @@ interface IProps {
 }
 
 const Menu = ({ items }: IProps) => {
-  console.log(items)
   return (
     <>
       <Head>

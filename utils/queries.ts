@@ -17,9 +17,12 @@ export const itemDetailQuery = (slug: string | string[]) => {
 };
 
 export const dailyMenuQuery = () => {
-  const query = `*[_type == "dailyMenu"] | order(_createdAt desc){
+  const query = `*[_type == "dailyMenu"] | order(_createdAt asc){
     ...,
-    foods[]->
+    foods[]->{
+      ...,
+      allergens[]->
+    }
   }`;
 
   return query;

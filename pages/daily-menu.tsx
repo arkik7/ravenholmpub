@@ -10,7 +10,6 @@ interface IProps {
 }
 
 const DailyMenu = ({ days }: IProps) => {
-  console.log(days)
   return (
     <>
       <Head>
@@ -21,41 +20,34 @@ const DailyMenu = ({ days }: IProps) => {
         <div className={styles.notepad}>
           <div className={styles.top}></div>
           <div className={styles.paper}>
-            <h2>Monday</h2>
-            <ul>
-              <li>Item sadsadsa dasdsadasd dasdsadsad</li>
-              <li>Item sadsadsa dasdsadasd dasdsadsad</li>
-              <li>Item sadsadsa dasdsadasd dasdsadsad</li>
-            </ul>
-
-            <h2>Monday</h2>
-            <ul>
-              <li>Item sadsadsa dasdsadasd dasdsadsad</li>
-              <li>Item sadsadsa dasdsadasd dasdsadsad</li>
-              <li>Item sadsadsa dasdsadasd dasdsadsad</li>
-            </ul>
-
-            <h2>Monday</h2>
-            <ul>
-              <li>Item sadsadsa dasdsadasd dasdsadsad</li>
-              <li>Item sadsadsa dasdsadasd dasdsadsad</li>
-              <li>Item sadsadsa dasdsadasd dasdsadsad</li>
-            </ul>
-
-            <h2>Monday</h2>
-            <ul>
-              <li>Item sadsadsa dasdsadasd dasdsadsad</li>
-              <li>Item sadsadsa dasdsadasd dasdsadsad</li>
-              <li>Item sadsadsa dasdsadasd dasdsadsad</li>
-            </ul>
-
-            <h2>Monday</h2>
-            <ul>
-              <li>Item sadsadsa dasdsadasd dasdsadsad</li>
-              <li>Item sadsadsa dasdsadasd dasdsadsad</li>
-              <li>Item sadsadsa dasdsadasd dasdsadsad</li>
-            </ul>
-       
+            {days.map((day) => (
+              <div key={day._id}>
+                <h2>{day.day}</h2>
+                {day.foods.length > 0 ?
+                <ul>
+                  {day.foods.map((food) => (
+                    <li key={food._id}>
+                      {food.name} | {food.details}: ${food.menuPrice[0]} (
+                      {food.allergens.map((allergen) => (
+                        <span 
+                          key={allergen.code} 
+                          className={`${styles.allergen} ${
+                          allergen.code === 'W' ? styles.wheat 
+                          : allergen.code === 'D' ? styles.dairy 
+                          : allergen.code === 'S' ? styles.sea 
+                          : allergen.code === 'E' ? styles.eggs 
+                          : styles.nuts}`} >{allergen.code}|</span>
+                      ))})
+                    </li>
+                  ))}
+                </ul> 
+                : 
+                <ul>
+                  <li>{day.message}</li>
+                </ul>
+                }
+              </div>
+            ))}
           </div>
         </div>
       </div>

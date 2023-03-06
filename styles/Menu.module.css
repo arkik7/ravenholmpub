@@ -87,7 +87,7 @@ span.allergen.nuts {
   font-size: 2.5rem;
   border: 6px solid #04110f;
   border-width: 6px 6px 0;
-  color: #dec022;
+  color: #cab448;
   text-align: center;
   grid-column: span 3;
   background: repeating-linear-gradient(90deg, #04110f 0px, #04110f 5px, transparent 5px, transparent 10px);
@@ -102,10 +102,10 @@ span.allergen.nuts {
   padding-top: 0.5rem;
 }
 .name span:nth-child(odd) {
-  background: #04110f;
+  background: #1fbea7;
 }
 .name span:nth-child(even) {
-  background: #dec022;
+  background: #3fbd34;
   color: #04110f;
 }
 
@@ -113,7 +113,7 @@ span.allergen.nuts {
   border: 6px solid #04110f;
   border-width: 6px 6px 0;
   grid-column: span 3;
-  background: #6f7bd0;
+  background: #0a1988;
   color: #e2dccc;
   padding: 1rem 1.6rem;
   font-size: 1.3rem;
