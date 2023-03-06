@@ -11,6 +11,78 @@ export const food = [
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac placerat dui.",
     _id: 2
   },
+  {
+    name: 'Pizza',
+    price: 10.99,
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac placerat dui.",
+    _id: 3
+  },
+  {
+    name: 'Pizza',
+    price: 10.99,
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac placerat dui.",
+    _id: 4
+  },
+  {
+    name: 'Pizza',
+    price: 10.99,
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac placerat dui.",
+    _id: 5
+  },
+  {
+    name: 'Pizza',
+    price: 10.99,
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac placerat dui.",
+    _id: 6
+  },
+  {
+    name: 'Pizza',
+    price: 10.99,
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac placerat dui.",
+    _id: 7
+  },
+  {
+    name: 'Pizza',
+    price: 10.99,
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac placerat dui.",
+    _id: 8
+  },
+  {
+    name: 'Pizza',
+    price: 10.99,
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac placerat dui.",
+    _id: 9
+  },
+  {
+    name: 'Pizza',
+    price: 10.99,
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac placerat dui.",
+    _id: 14
+  },
+  {
+    name: 'Pizza',
+    price: 10.99,
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac placerat dui.",
+    _id: 10
+  },
+  {
+    name: 'Pizza',
+    price: 10.99,
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac placerat dui.",
+    _id: 11
+  },
+  {
+    name: 'Pizza',
+    price: 10.99,
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac placerat dui.",
+    _id: 12
+  },
+  {
+    name: 'Pizza',
+    price: 10.99,
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac placerat dui.",
+    _id: 13
+  },
 ];
 
 

@@ -1,5 +1,4 @@
 import React from 'react'
-import MenuItem from './MenuItem'
 import { NextPage } from 'next';
 import { Food } from '@/types';
 import styles from '@/styles/Menu.module.css'
@@ -38,10 +37,8 @@ const MenuBody: NextPage<IProps> = ({data}) => {
                 <SidesGridList data={data}/>
                 <TartsGridList data={data}/>
                 <SpecialsGridList data={data}/>
-
                 <a className={styles.menudownload}>Download the menu</a>
             </div>
-
         </main>
         <MenuFooter/>
     </div>

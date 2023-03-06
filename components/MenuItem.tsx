@@ -17,7 +17,7 @@ const MenuItem: NextPage<IProps> = ({ item: { name, price, description }}) => {
       <div className={styles.item__desc}>
         <div className={styles.item__name}>{name}</div>
         <div className={styles.item__description}>{description}</div>
-        <div className={styles.item__price}>$ {price}</div>
+        <div className={styles.item__price}>${price.toFixed(2)}</div>
         <div className={styles.item__calories}>300 calories</div>
         <div className={styles.item__allergens}>
           <span className={`${styles.allergen} ${styles.wheat}`}>W</span>

@@ -49,15 +49,23 @@ span.allergen:not(:first-child) {
 }
 span.allergen.eggs {
   background: #931a47;
+  border: 2px solid #04110f;
+  color: #e2dccc;
 }
 span.allergen.wheat {
   background: #e88c30;
+  border: 2px solid #04110f;
+  color: #e2dccc;
 }
 span.allergen.dairy {
   background: #009688;
+  border: 2px solid #04110f;
+  color: #e2dccc;
 }
 span.allergen.sea {
   background: #ca3101;
+  border: 2px solid #04110f;
+  color: #e2dccc;
 }
 
 .header {
