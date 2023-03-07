@@ -7,12 +7,24 @@ import { FiFacebook, FiInstagram, FiTwitter } from 'react-icons/fi'
 
 export default function Home() {
   return (
-    <>
+    <div className={styles.header}>
+      <header className='header__custom'>
+        <div className='overlay'>
+          <h1>Welcome to</h1>
+          <h3>Ravenholm pub</h3>
+          <p>This is a fictional pub, page created for demo purposes.</p>
+          <br />
+          <button>Explore Menu</button>
+        </div>
+      </header>
       <div className={styles.main}>
+        <div className={styles.menuheader}>
+          <h2 className={styles.main__h2}>On Menu Today</h2>
+        </div>
         <ul className={styles.cards}>
           <li className={styles.cards_item}>
             <div className={styles.card}>
-              <div className={styles.card_image}><img src="https://assets.codepen.io/652/photo-1468777675496-5782faaea55b.jpeg" alt="mixed vegetable salad in a mason jar. " /></div>
+              <div className={styles.card_image}><img src="https://cdn.sanity.io/images/icbaw51l/production/7eeb54fb12770cd4e0f54a68cbf4f3ff442c56e6-1920x1280.jpg" alt="mixed vegetable salad in a mason jar. " /></div>
               <div className={styles.card_content}>
                 <h2 className={`${styles.card_title} ${styles.h2}`}>Farmstand Salad • $9</h2>
                 <div className={styles.card_text}>
@@ -24,7 +36,7 @@ export default function Home() {
           </li>
           <li className={styles.cards_item}>
             <div className={styles.card}>
-              <div className={styles.card_image}><img src="https://assets.codepen.io/652/photo-1520174691701-bc555a3404ca.jpeg" alt="a Reuben sandwich on wax paper. " /></div>
+              <div className={styles.card_image}><img src="https://cdn.sanity.io/images/icbaw51l/production/a6bd8686b8e1052a1e2603493acb551ca9207fb7-640x487.jpg" alt="a Reuben sandwich on wax paper. " /></div>
               <div className={styles.card_content}>
                 <h2 className={`${styles.card_title} ${styles.h2}`}>Ultimate Reuben • $18</h2>
                 <div className={styles.card_text}>
@@ -41,7 +53,7 @@ export default function Home() {
           </li>
           <li className={styles.cards_item}>
             <div className={styles.card}>
-              <div className={styles.card_image}><img src="https://assets.codepen.io/652/photo-1544510808-91bcbee1df55.jpeg" alt="A side view of a plate of figs and berries. " /></div>
+              <div className={styles.card_image}><img src="https://cdn.sanity.io/images/icbaw51l/production/d311f0015fd0b8b8808ef62cacfab3845e04c204-5184x3456.jpg" alt="A side view of a plate of figs and berries. " /></div>
               <div className={styles.card_content}>
                 <h2 className={`${styles.card_title} ${styles.h2}`}>Fig &amp; Berry Plate • $16</h2>
                 <div className={styles.card_text}>
@@ -54,6 +66,6 @@ export default function Home() {
           </li>
         </ul>
       </div>
-    </>
+    </div>
   )
 }

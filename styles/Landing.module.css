@@ -9,6 +9,21 @@
   margin: 0 auto;
 }
 
+.menuheader {
+  text-align: center;
+}
+
+.main__h2 {
+  font-family: 'Dancing Script', cursive;
+	font-size: 40px;
+	margin-bottom: 30px;
+}
+
+.header {
+  padding: 0;
+  margin-top: 30px;
+}
+
 .cards {
   display: grid;
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -85,4 +100,12 @@
 
 .html {
   font-size:15px;
+}
+
+
+@media screen and (max-width: 450px) {
+  .main__h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
 }
