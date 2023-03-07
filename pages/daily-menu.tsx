@@ -43,7 +43,7 @@ const DailyMenu = ({ days }: IProps) => {
                 </ul> 
                 : 
                 <ul>
-                  <li>{day.message}</li>
+                  <li>{day.message || "Closed"}</li>
                 </ul>
                 }
               </div>
