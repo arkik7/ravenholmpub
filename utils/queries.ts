@@ -1,5 +1,5 @@
 export const allItemsQuery = () => {
-  const query = `*[_type == "item"] | order(_createdAt desc){
+  const query = `*[_type == "item" && !(_id in path('drafts.**'))] | order(_createdAt desc){
     ...,
     categories[]->,
     allergens[]->
@@ -17,7 +17,7 @@ export const itemDetailQuery = (slug: string | string[]) => {
 };
 
 export const dailyMenuQuery = () => {
-  const query = `*[_type == "dailyMenu"] | order(_createdAt asc){
+  const query = `*[_type == "dailyMenu" && !(_id in path('drafts.**'))] | order(_createdAt asc){
     ...,
     foods[]->{
       ...,

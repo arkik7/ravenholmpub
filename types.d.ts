@@ -34,6 +34,9 @@ export interface DailyMenu {
   day: string;
   foods: Item[];
   message: string;
+  slug: {
+    current: string;
+  };
 }
 
 export interface Contact {
