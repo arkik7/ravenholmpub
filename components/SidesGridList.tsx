@@ -1,5 +1,4 @@
 import React from 'react'
-import MenuItem from './MenuItem'
 import { NextPage } from 'next';
 import { Item } from '@/types';
 import styles from '@/styles/Menu.module.css'
@@ -12,29 +11,27 @@ const SidesGridList: NextPage<IProps> = ({data}) => {
   return (
     <div className={styles.sides}>
         <h3>Sides</h3>
-              <div className={styles.item}>
-                <div className={styles.item__desc}>
-                  <div className={styles.item__name}>French Fries</div>
-                  <div className={styles.item__description}>With ketchup or mayo</div>
-                  <div className={styles.item__price}>$4</div>
-                  <div className={styles.item__calories}>425 calories</div>
-                </div>
+        {data.map((item) => (
+          <div key={item._id} className={styles.item}>
+            <div className={styles.item__desc}>
+              <div className={styles.item__name}>{item.name}</div>
+              <div className={styles.item__description}>{item.details}</div>
+              <div className={styles.item__price}>${item.price}</div>
+              <div className={styles.item__calories}>
+                {item.allergens.map((allergen) => (
+                  <span 
+                    key={allergen.code} 
+                    className={`${styles.allergen} ${
+                    allergen.code === 'W' ? styles.wheat 
+                    : allergen.code === 'D' ? styles.dairy 
+                    : allergen.code === 'S' ? styles.sea 
+                    : allergen.code === 'E' ? styles.eggs 
+                    : styles.nuts}`} >{allergen.code}</span>
+                ))}
               </div>
-              <div className={styles.item}>
-                <div className={styles.item__desc}>
-                  <div className={styles.item__name}>Sweet Potato Fries</div>
-                  <div className={styles.item__description}>With chipotle lime dip</div>
-                  <div className={styles.item__price}>$5.5</div>
-                  <div className={styles.item__calories}>510 calories</div>
-                </div>
-              </div>
-              <div className={styles.item}>
-                <div className={styles.item__desc}>
-                  <div className={styles.item__name}>Hummus &amp; Tortilla Chips</div>
-                  <div className={styles.item__price}>$5.5</div>
-                  <div className={styles.item__calories}>333 calories</div>
-                </div>
-              </div>
+            </div>
+          </div>
+        ))}
     </div>
   )
 }
