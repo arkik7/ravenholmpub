@@ -12,7 +12,7 @@ interface IProps {
 const SpecialsGridList: NextPage<IProps> = ({data}) => {
   return (
     <div className={styles.latte}>
-      <h3> Special Lattes</h3>
+      <h3> Specials</h3>
       {data.map((item) => (
         <div key={item._id} className={styles.item}>
           <div className={styles.item__image}>

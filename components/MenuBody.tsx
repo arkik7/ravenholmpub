@@ -13,6 +13,24 @@ interface IProps {
 }
 
 const MenuBody: NextPage<IProps> = ({data}) => {
+  
+  const mainGridData = data.filter(function (item) {
+    return item.categories[0].title === 'Food';
+  });
+
+  const sidesGridData = data.filter(function (item) {
+    return item.categories[0].title === 'Side';
+  });
+
+  const tartsGridData = data.filter(function (item) {
+    return item.categories[0].title === 'Tart';
+  });
+
+  const specialsGridData = data.filter(function (item) {
+    return item.categories[0].title === 'Special';
+  });
+  
+
   return (
     <div className={styles.menubody}>
         <header className={styles.header}>
@@ -33,10 +51,10 @@ const MenuBody: NextPage<IProps> = ({data}) => {
                 <div className={styles.legend__item}><i>S</i><span>Seafood</span></div>
             </div>
             <div className={styles.menu}>
-                <MainsGridList data={data}/>
-                <SidesGridList data={data}/>
-                <TartsGridList data={data}/>
-                <SpecialsGridList data={data}/>
+                <MainsGridList data={mainGridData}/>
+                <SidesGridList data={sidesGridData}/>
+                <TartsGridList data={tartsGridData}/>
+                <SpecialsGridList data={specialsGridData}/>
                 <a className={styles.menudownload}>Download the menu</a>
             </div>
         </main>
