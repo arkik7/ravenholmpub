@@ -13,14 +13,14 @@ const TodaysMenu: NextPage<IProps> = ({data}) => {
   
   return (
     <ul className={styles.cards}>
-        {(data.foods.length < 1) ? 
+        {(data.foods === null) ? 
         (
         <li className={styles.menuheader}>
             <div className={styles.card}>
               <div className={styles.card_content}>
-                <h2 className={`${styles.card_title} ${styles.h2}`}>{data.day}</h2>
+                <h2 className={`${styles.card_title} ${styles.h2}`}>{data?.day}</h2>
                 <div className={styles.card_text}>
-                  <p className={styles.p}>{data.message || "Closed today"}</p>
+                  <p className={styles.p}>{data?.message || "Closed today"}</p>
                 </div>
               </div>
             </div>
@@ -28,7 +28,7 @@ const TodaysMenu: NextPage<IProps> = ({data}) => {
         : 
         (
         <>
-        {data.foods.map((food) => (
+        {data?.foods.map((food) => (
           <li key={food._id} className={styles.cards_item}>
             <div className={styles.card}>
               <div className={styles.card_image}>
