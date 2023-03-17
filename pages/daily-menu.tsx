@@ -23,7 +23,11 @@ const DailyMenu = ({ days }: IProps) => {
             {days.map((day) => (
               <div key={day._id}>
                 <h2>{day.day}</h2>
-                {day.foods.length > 0 ?
+                {(day.foods === null || day.foods.length < 1) ?
+                <ul>
+                  <li>{day?.message || "Closed"}</li>
+                </ul>
+                : 
                 <ul>
                   {day.foods.map((food) => (
                     <li key={food._id}>
@@ -40,10 +44,6 @@ const DailyMenu = ({ days }: IProps) => {
                       ))})
                     </li>
                   ))}
-                </ul> 
-                : 
-                <ul>
-                  <li>{day.message || "Closed"}</li>
                 </ul>
                 }
               </div>

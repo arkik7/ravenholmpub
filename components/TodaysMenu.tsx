@@ -13,7 +13,7 @@ const TodaysMenu: NextPage<IProps> = ({data}) => {
   
   return (
     <ul className={styles.cards}>
-        {(data.foods === null) ? 
+        {(data.foods === null || data.foods.length < 1) ? 
         (
         <li className={styles.menuheader}>
             <div className={styles.card}>
