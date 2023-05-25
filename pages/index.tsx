@@ -40,7 +40,7 @@ export default function Home({ days }: IProps) {
 }
 
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
 
   let dayRes = await axios.get(`${BASE_URL}/api/dailyMenu`);
 
@@ -48,5 +48,6 @@ export const getServerSideProps = async () => {
     props: { 
       days: dayRes.data,
     },
+    revalidate: 60
   };
 };

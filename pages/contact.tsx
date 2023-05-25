@@ -13,10 +13,8 @@ const Contact = () => {
       </Head>
 
       {/**contact section  */}
-
-
       <div className={css.notepadbody}>
-      <div className={css.notepad}>
+        <div className={css.notepad}>
           <div className={css.top}></div>
           <div className={css.paper}>
             {contact.map((item) => (
@@ -47,10 +45,22 @@ const Contact = () => {
             ))}
           </div>
         </div>
-
-        
-
       </div>
+    </>
+  )
+}
+
+export default Contact
+
+
+
+
+
+
+
+
+
+
       {/**contact section */}
       
 
@@ -134,26 +144,4 @@ const Contact = () => {
         </div>
         
       </div>   */}
-       {/**3d */}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-    </>
-  )
-}
-
-export default Contact
+       {/**3d */}  

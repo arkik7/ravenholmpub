@@ -24,7 +24,7 @@ const Menu = ({ items }: IProps) => {
 
 export default Menu
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
 
   let itemRes = await axios.get(`${BASE_URL}/api/item`);
 
@@ -32,5 +32,6 @@ export const getServerSideProps = async () => {
     props: { 
       items: itemRes.data,
     },
+    revalidate: 60
   };
 };
